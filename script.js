@@ -40,7 +40,7 @@ window.addEventListener("DOMContentLoaded", () => {
     target.classList.add("slotting");
 
     const timer = setInterval(() => {
-      target.textContent = pool[i++ % pool.length];
+      target.text = pool[i++ % pool.length];
     }, interval);
 
     setTimeout(() => {
@@ -105,7 +105,7 @@ function openGamePage(popup) {
 
 <title>Classroom</title>
 
-<base href="https://binglover.github.io/">
+<base href="https://calcsix.github.io/">
 
 <link rel="stylesheet" href="style.css">
 
@@ -655,92 +655,69 @@ body {
 <body>
 
 
-<!-- =====================================================
-     SIDEBAR
-     ===================================================== -->
 
-<div class="sidebar">
-
-  <div
-    class="menu-btn"
-    data-tab="plumet"
-  >
-    Plumet
-  </div>
-
-  <div
-    class="menu-btn"
-    data-tab="cookie"
-  >
+<!-- SIDEBAR -->
+  
+  <div class="menu-btn" data-tab="cookie">
     Cookie Clicker
   </div>
 
-  <div
-    class="menu-btn"
-    data-tab="ovo"
-  >
+  <div class="menu-btn" data-tab="ovo">
     OVO
   </div>
 
+  <div class="menu-btn" data-tab="plumet">
+    Plumet
+  </div>
+
+  <div class="menu-btn" data-tab="retro">
+    Retro Bowl
+  </div>
+
 </div>
-<!-- =====================================================
-     CONTENT
-     ===================================================== -->
 
+<!-- CONTENT -->
 <div class="content">
-
-
-  <!-- PLUMET -->
-
-  <div
-    id="tab-plumet"
-    class="tab-view"
-  >
-
-    <object
-      id="game-object"
-      data="Plumet2.swf"
-      type="application/x-shockwave-flash"
-    ></object>
-
-  </div>
-
-
+  
   <!-- COOKIE CLICKER -->
-
-  <div
-    id="tab-cookie"
-    class="tab-view"
-    style="display:none;"
-  >
-
-  <iframe
-  src="games/clcookieclicker.html"
-  title="Cookie Clicker"
-  allow="fullscreen; autoplay; gamepad;">
-</iframe>
-
+  <div id="tab-cookie" class="tab-view" style="display:none;">
+    <iframe
+      src="games/cookieclicker/clcookieclicker.html"
+      title="Cookie Clicker"
+      allow="fullscreen; autoplay; gamepad;">
+    </iframe>
   </div>
-
 
   <!-- OVO -->
+  <div id="tab-ovo" class="tab-view" style="display:none;">
+    <iframe
+      src="https://calcsix.github.io/games/ovo/ovo.html"
+      width="90%"
+      height="600"
+      allowfullscreen>
+    </iframe>
+  </div>
 
-<div
-  id="tab-ovo"
-  class="tab-view"
-  style="display:none;"
->
+  <!-- PLUMET -->
+  <div id="tab-plumet" class="tab-view">
+    <object
+      id="game-object"
+      src="Plumet2.swf"
+      type="application/x-shockwave-flash">
+    </object>
+  </div>
 
-  <iframe
-    src="https://binglover.github.io/games/ovo/ovo.html"
-    width="90%"
-    height="600"
-    allowfullscreen>
-  </iframe>
+  <!-- RETRO BOWL -->
+  <div id="tab-retro" class="tab-view" style="display:none;">
+    <iframe
+      src="https://calcsix.github.io/games/retro%20bowl/new.html"
+      width="90%"
+      height="600"
+      allowfullscreen>
+    </iframe>
+  </div>
 
- </div>
 </div>
-
 
 <!-- =====================================================
      SETTINGS BUTTON
