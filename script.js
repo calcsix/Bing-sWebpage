@@ -659,37 +659,37 @@ body {
      SIDEBAR
      ===================================================== -->
 
-<div class="sidebar">
 
-  <div
-    class="menu-btn"
-    data-tab="plumet"
-  >
-    Plumet
-  </div>
+<body>
 
-  <div
-    class="menu-btn"
-    data-tab="cookie"
-  >
-    Cookie Clicker
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="menu-btn" data-tab="home"> Home</div>
+    <div class="menu-btn" data-tab="cookie">Cookie Clicker</div>
+    <div class="menu-btn" data-tab="ovo">OVO</div>
+    <div class="menu-btn" data-tab="plumet">Plumet 2</div>
+    <div class="menu-btn" data-tab="retro">Retro Bowl</div>
   </div>
 
-  <div
-    class="menu-btn"
-    data-tab="ovo"
-  >
-    OVO
+  <!-- CONTENT -->
+  <div class="content">
+
+    <div id="tab-home" class="tab-view">
+      <h1>Home</h1>
+      <p>Manage which games are loaded to make them run better.</p>
+      <div id="game-toggle-list"></div>
+    </div>
+
+    <!-- KEEP YOUR EXISTING COOKIE, OVO, PLUMET,
+         AND RETRO BOWL VIEWS HERE. -->
+
   </div>
- 
-  <div
-    class="menu-btn"
-    data-tab="retro"
-  >
-    RETRO BOWL
-  </div>
-  
-</div>
+
+  <!-- KEEP YOUR SETTINGS BUTTON, SETTINGS PANEL,
+       AND SCRIPT BELOW HERE. -->
+
+</body>
+
 <!-- =====================================================
      CONTENT
      ===================================================== -->
@@ -706,7 +706,7 @@ body {
 
     <object
       id="game-object"
-      data="Plumet2.swf"
+      data-game-src="Plumet2.swf"
       type="application/x-shockwave-flash"
     ></object>
 
@@ -722,7 +722,7 @@ body {
   >
 
   <iframe
-  src="games/cookieclicker/clcookieclicker.html"
+  data-game-src="games/cookieclicker/clcookieclicker.html"
   title="Cookie Clicker"
   allow="fullscreen; autoplay; gamepad;">
 </iframe>
@@ -739,7 +739,7 @@ body {
 >
 
   <iframe
-    src="https://calcsix.github.io/games/ovo/ovo.html"
+    data-game-src="https://calcsix.github.io/games/ovo/ovo.html"
     width="90%"
     height="600"
     allowfullscreen>
@@ -757,7 +757,7 @@ body {
 >
 
   <iframe
-    src="https://calcsix.github.io/games/retro bowl/new.html"
+    data-game-src="https://calcsix.github.io/games/retro bowl/new.html"
     width="90%"
     height="600"
     allowfullscreen>
